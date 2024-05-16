@@ -18,6 +18,7 @@ class ComicsTableSeeder extends Seeder
         foreach($comics as $comic){
             $new_comic = new Comic();
             $new_comic-> title = $comic['title'];
+            $new_comic-> thumb = $comic['thumb'];
             $new_comic-> slug = Helper::generateSlug($new_comic->title,new Comic());
             $new_comic-> description = $comic['description'];
             $new_comic-> price = $comic['price'];
