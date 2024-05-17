@@ -3,8 +3,8 @@
 
 @section('content')
 
-<div class="container">
-    <h1 class="text-center mb-5">{{$comic->title}}</h1>
+<div class="container mt-5 ">
+    <h1 class="text-center pt-5 mb-5">{{$comic->title}}</h1>
     <div class="d-flex">
         <div>
             <img src="{{$comic->thumb}}" alt="{{$comic->title}}" class="me-5" style="width: 400px">

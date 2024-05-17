@@ -62,15 +62,26 @@ class ComicsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $comic = Comic::find($id);
+        return view('comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $form_data = $request->all();
+        if($form_data['title']== $comic->title){
+            $form_data['slug'] = $comic->slug;
+        }else{
+            $form_data['slug'] = Helper::generateSlug($form_data['title'], new Comic());
+        }
+        $form_data['artists'] = json_encode(explode(',', $form_data['artists']));
+        $form_data['writers'] = json_encode(explode(',',$form_data['writers']));
+
+        $comic->update($form_data);
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
