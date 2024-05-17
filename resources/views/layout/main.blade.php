@@ -11,7 +11,7 @@
     <!-- Styles -->
     @vite('resources/js/app.js')
 
-    <title>Template</title>
+    <title>Comics</title>
 </head>
 <body>
     @include('partials.header')
