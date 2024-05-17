@@ -4,7 +4,7 @@
 @section('content')
 
 @if (session('deleted'))
-    <div class="alert alert-seccess pt-5 pb-5" role="alert">{{ session('deleted')}}</div>
+    <div class="alert alert-success" role="alert"style="margin-top:50px">{{ session('deleted')}} </div>
 @endif
 <div class="container d-flex flex-wrap pt-5 pb-5 ">
     @foreach ($comics as $comic )
