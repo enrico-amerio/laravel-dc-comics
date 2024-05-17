@@ -13,6 +13,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{route('comics.index')}}">Tutti i fumetti</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('comics.create')}}">Aggiungi fumetto</a>
+              </li>
             </ul>
           </div>
         </div>
